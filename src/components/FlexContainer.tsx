@@ -9,7 +9,7 @@ interface FlexContainerProps {
 
 export const FlexContainer = styled.div<FlexContainerProps>`
   display: flex;
-  justify-content: ${props => (props.content ? props.content : 'flex-start')};
-  align-items: ${props => (props.align ? props.align : 'stretch')};
-  flex-direction: ${props => (props.wrap ? props.wrap : 'nowrap')};
+  justify-content: ${props => props.content || 'flex-start'};
+  align-items: ${props => props.align || 'stretch'};
+  flex-direction: ${props => props.wrap || 'nowrap'};
 `;

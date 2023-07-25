@@ -2,10 +2,10 @@ import icon from '../../assets/img/icon-sprite.svg';
 
 interface IconProps {
   id: string;
-  width: string;
-  heigth: string;
-  viewBox: string;
-  color: string;
+  width?: string;
+  heigth?: string;
+  viewBox?: string;
+  color?: string;
 }
 
 const Icon = ({ id, width, heigth, viewBox, color }: IconProps) => {
@@ -16,7 +16,7 @@ const Icon = ({ id, width, heigth, viewBox, color }: IconProps) => {
       height={heigth}
       viewBox={viewBox}
       fill={color}
-      xmlns="http://www.w3.org/2000/svg">
+      xmlns='http://www.w3.org/2000/svg'>
       <use xlinkHref={`${icon}#${id}`}></use>
     </svg>
   );
