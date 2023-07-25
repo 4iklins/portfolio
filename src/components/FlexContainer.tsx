@@ -5,11 +5,14 @@ interface FlexContainerProps {
   wrap?: 'wrap' | 'nowrap' | 'wrap-reverse';
   content?: 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'space-evenly';
   align?: 'stretch' | 'start' | 'end' | 'center';
+  gap?: string;
 }
 
 export const FlexContainer = styled.div<FlexContainerProps>`
   display: flex;
+  flex-direction: ${props => props.direction || 'row'};
   justify-content: ${props => props.content || 'flex-start'};
   align-items: ${props => props.align || 'stretch'};
-  flex-direction: ${props => props.wrap || 'nowrap'};
+  flex-wrap: ${props => props.wrap || 'nowrap'};
+  gap: ${props => props.gap || 'initial'};
 `;
