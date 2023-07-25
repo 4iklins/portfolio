@@ -3,13 +3,13 @@ import Icon from '../icon/Icon';
 
 export const Logo = () => {
   return (
-    <StyledLogo>
+    <StyledLogo href='#'>
       <Icon
-        id="code"
-        width="50"
-        heigth="50"
-        viewBox="0 0 50 50"
-        color="#7572D5"
+        id='code'
+        width='50'
+        heigth='50'
+        viewBox='0 0 50 50'
+        color='#7572D5'
       />
     </StyledLogo>
   );

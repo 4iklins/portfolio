@@ -5,19 +5,19 @@ export const Menu = () => {
     <StyledMenu>
       <ul>
         <li>
-          <a href="#">Home</a>
+          <a href='#'>Home</a>
         </li>
         <li>
-          <a href="#">Skills</a>
+          <a href='#'>Skills</a>
         </li>
         <li>
-          <a href="#">Works</a>
+          <a href='#'>Works</a>
         </li>
         <li>
-          <a href="#">Testimony</a>
+          <a href='#'>Testimony</a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <a href='#'>Contact</a>
         </li>
       </ul>
     </StyledMenu>

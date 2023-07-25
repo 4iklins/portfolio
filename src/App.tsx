@@ -1,10 +1,14 @@
 import './App.css';
-import styled from 'styled-components';
-import icons from './assets/img/icon-sprite.svg';
 import Header from './layout/header/Header';
+import Main from './layout/sections/main/Main';
 
 function App() {
-  return <Header></Header>;
+  return (
+    <>
+      <Header></Header>
+      <Main></Main>
+    </>
+  );
 }
 
 export default App;
