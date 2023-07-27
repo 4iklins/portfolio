@@ -21,8 +21,16 @@ const Work = ({ imgSrc, title, description, linkDemo, linkCode }: WorkProps) => 
   );
 };
 
-const StyledWork = styled.div``;
-const Image = styled.img``;
+const StyledWork = styled.div`
+  min-height: 1vh;
+  max-width: 540px;
+  width: 100%;
+`;
+const Image = styled.img`
+  height: 260px;
+  width: 100%;
+  object-fit: cover;
+`;
 const Title = styled.h3``;
 const P = styled.p``;
 const Link = styled.a``;

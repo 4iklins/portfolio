@@ -12,7 +12,9 @@ const Works = () => {
     <StyledWorks>
       <SectionTitle>My works</SectionTitle>
       <Menu menu={menu} />
-      <FlexContainer>
+      <FlexContainer
+        gap={'60px'}
+        content='center'>
         {worksData.map(work => {
           return <Work {...work} />;
         })}
