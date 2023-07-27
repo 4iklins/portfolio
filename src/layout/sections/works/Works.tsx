@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import SectionTitle from '../../../components/section-title/SectionTitle';
+import SectionTitle from '../../../components/SectionTitle';
 import Menu from '../../../components/menu/Menu';
 import { FlexContainer } from '../../../components/FlexContainer';
 import { worksData } from './worksData';
