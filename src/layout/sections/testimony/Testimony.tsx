@@ -7,10 +7,10 @@ import { FlexContainer } from '../../../components/FlexContainer';
 const Testimony = () => {
   return (
     <StyledTestimony>
+      <SectionTitle>Testimony</SectionTitle>
       <FlexContainer
         direction='column'
         align='center'>
-        <SectionTitle>Testimony</SectionTitle>
         <Icon
           id='quote'
           heigth='50'
