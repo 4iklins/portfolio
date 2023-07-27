@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Icon from '../icon/Icon';
+import Icon from '../../../../components/icon/Icon';
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 interface SkillProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

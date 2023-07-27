@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { FlexContainer } from '../../../components/FlexContainer';
-import Photo from '../../../components/photo/Photo';
 import myPhoto from '../../../assets/img/photo.jpg';
 
 export const Main = () => {
@@ -14,7 +13,7 @@ export const Main = () => {
           <h2>I am Andrei Bortnik</h2>
           <h1>A Web Developer. </h1>
         </div>
-        <Photo src={myPhoto} />
+        <StyledPhoto src={myPhoto} />
       </FlexContainer>
     </StyledMain>
   );
@@ -23,6 +22,11 @@ export const Main = () => {
 const StyledMain = styled.section`
   min-height: 100vh;
   background-color: #deffff;
+`;
+const StyledPhoto = styled.img`
+  width: 350px;
+  height: 430px;
+  object-fit: cover;
 `;
 
 export default Main;

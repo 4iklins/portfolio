@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { FlexContainer } from '../../../components/FlexContainer';
 import SectionTitle from '../../../components/section-title/SectionTitle';
-import SkillCard from '../../../components/skill-card/SkillCard';
+import SkillCard from './skill-card/SkillCard';
 import { skillsArray } from './skillsData';
 
 export const Skills = () => {
