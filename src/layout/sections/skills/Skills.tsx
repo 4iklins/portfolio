@@ -3,32 +3,31 @@ import { FlexContainer } from '../../../components/FlexContainer';
 import SectionTitle from '../../../components/SectionTitle';
 import SkillCard from './skill-card/SkillCard';
 import { skillsArray } from './skillsData';
+import { Container } from '../../../components/Container';
 
 export const Skills = () => {
   return (
     <StyledSkills>
-      <SectionTitle>Title</SectionTitle>
-      <FlexContainer
-        wrap='wrap'
-        gap='10px'
-        content='center'>
-        {skillsArray.map(skill => {
-          return (
-            <SkillCard
-              title={skill.title}
-              iconId={skill.iconId}
-              description={skill.description}
-            />
-          );
-        })}
-      </FlexContainer>
+      <Container>
+        <SectionTitle>My skills</SectionTitle>
+        <FlexContainer
+          wrap='wrap'
+          content='center'>
+          {skillsArray.map(skill => {
+            return (
+              <SkillCard
+                title={skill.title}
+                iconId={skill.iconId}
+                description={skill.description}
+              />
+            );
+          })}
+        </FlexContainer>
+      </Container>
     </StyledSkills>
   );
 };
 
-const StyledSkills = styled.section`
-  min-height: 100vh;
-  background-color: #9ffcc6;
-`;
+const StyledSkills = styled.section``;
 
 export default Skills;
