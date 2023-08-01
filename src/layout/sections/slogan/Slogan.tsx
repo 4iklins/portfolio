@@ -10,5 +10,9 @@ const Slogan = () => {
     </StyledSlogan>
   );
 };
-const StyledSlogan = styled.section``;
+const StyledSlogan = styled.section`
+  ${Button} {
+    margin: 0 auto;
+  }
+`;
 export default Slogan;

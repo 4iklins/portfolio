@@ -29,6 +29,9 @@ const Form = styled.form`
   flex-direction: column;
   margin: 0 auto;
   gap: 10px;
+  ${Button} {
+    align-self: center;
+  }
 `;
 const Input = styled.input``;
 

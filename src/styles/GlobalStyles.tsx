@@ -32,10 +32,21 @@ export const GlobalStyles = createGlobalStyle`
 	section{
 		padding: 100px 0;
 	}
-	section:nth-of-type(odd){
+	section:nth-of-type(odd) {
 		background-color:${({ theme }) => theme.colors.bgPrimary}
 	}
-	section:nth-of-type(even){
+	section:nth-of-type(even) {
 		background-color: ${({ theme }) => theme.colors.bgSecondary}
+	}
+	p {
+		font-size: 14px;
+  		font-weight: 400;
+		line-height: 1.4;
+	}
+	h3 {
+		font-family: Josefin Sans, sans-serif;
+  		font-size: 16px;
+  		font-weight: 700;
+  		letter-spacing: 1px;
 	}
 `;
