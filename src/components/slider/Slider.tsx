@@ -12,7 +12,7 @@ const Slider = () => {
       <Name>@Ivan Ivanov</Name>
       <Pagination>
         <span></span>
-        <span></span>
+        <span className='active'></span>
         <span></span>
       </Pagination>
     </StyledSlider>
@@ -23,14 +23,29 @@ const StyledSlider = styled.div`
   text-align: center;
 `;
 const Text = styled.p``;
-const Name = styled.span``;
+const Name = styled.span`
+  display: inline-block;
+  margin: 20px 0 40px;
+  font-family: Josefin Sans;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+`;
 const Pagination = styled.div`
   & span {
     display: inline-block;
-    margin: 5px;
-    width: 10px;
-    height: 10px;
-    background-color: #f7adad;
+    width: 7px;
+    height: 7px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    & + span {
+      margin-left: 5px;
+    }
+    &.active {
+      width: 20px;
+      background-color: ${({ theme }) => theme.colors.accent};
+    }
   }
 `;
 
