@@ -6,5 +6,7 @@ export const theme: ITheme = {
     bgSecondary: '#252527',
     accent: '#7572D5',
     font: '#FFFFFF',
+    border: '#4A4A4A',
+    paceholder: '#495057',
   },
 };
