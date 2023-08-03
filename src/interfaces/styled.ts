@@ -4,5 +4,7 @@ export interface ITheme {
     bgSecondary: string;
     accent: string;
     font: string;
+    border: string;
+    paceholder: string;
   };
 }

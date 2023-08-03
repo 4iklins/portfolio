@@ -23,16 +23,34 @@ const StyledContact = styled.section`
   background-color: #eafcab;
 `;
 const Form = styled.form`
-  max-width: 500px;
+  max-width: 540px;
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0 auto;
-  gap: 10px;
-  ${Button} {
-    align-self: center;
+  gap: 16px;
+  textarea {
+    resize: none;
+    height: 155px;
   }
 `;
-const Input = styled.input``;
+const Input = styled.input`
+  width: 100%;
+  padding: 7px 15px;
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  background-color: ${({ theme }) => theme.colors.bgSecondary};
+  color: ${({ theme }) => theme.colors.font};
+  &::placeholder {
+    color: ${({ theme }) => theme.colors.paceholder};
+  }
+
+  &:focus-visible {
+    outline: 1px solid ${({ theme }) => theme.colors.border};
+  }
+`;
 
 export default Contact;
