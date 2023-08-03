@@ -61,23 +61,23 @@ const ListItem = styled.li`
     content: '';
     position: absolute;
     display: inline-block;
-    height: 3px;
+    height: 2px;
     background-color: ${({ theme }) => theme.colors.accent};
     top: 50%;
-    transform: translateY(-50%) scale(0);
+    transform: scale(0);
     left: -10px;
     right: -10px;
     z-index: 1;
   }
   &:hover {
     &::before {
-      transform: translateY(-50%) scale(1);
+      transform: scale(1);
     }
     ${Mask} {
-      transform: skewX(12deg) translateX(3px);
+      transform: skewX(10deg) translateX(3px);
       color: ${({ theme }) => theme.colors.font};
       & + ${Mask} {
-        transform: skewX(12deg) translateX(-3px);
+        transform: skewX(10deg) translateX(-3px);
       }
     }
   }
