@@ -1,8 +1,11 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const HeaderMenu = ({ menu }: { menu: string[] }) => {
   return (
-    <StyledHeaderMenu>
+    <StyledHeaderMenu isOpen={false}>
+      <BurgerButton isOpen={false}>
+        <span></span>
+      </BurgerButton>
       <ul>
         {menu.map(item => {
           return (
@@ -23,10 +26,25 @@ const HeaderMenu = ({ menu }: { menu: string[] }) => {
     </StyledHeaderMenu>
   );
 };
-const StyledHeaderMenu = styled.nav`
+const StyledHeaderMenu = styled.nav<{ isOpen: boolean }>`
   ul {
     display: flex;
     gap: 30px;
+  }
+
+  @media ${({ theme }) => theme.media.tablet} {
+    ul {
+      ${props => !props.isOpen && `display:none;`}
+      position: fixed;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgb(31, 31, 32, 0.9);
+    }
   }
 `;
 
@@ -80,6 +98,68 @@ const ListItem = styled.li`
         transform: skewX(10deg) translateX(-3px);
       }
     }
+  }
+`;
+
+const BurgerButton = styled.button<{ isOpen: boolean }>`
+  display: none;
+  @media ${({ theme }) => theme.media.tablet} {
+    position: fixed;
+    height: 100px;
+    width: 100px;
+    top: 0;
+    right: 0;
+    display: block;
+    z-index: 1000;
+    span {
+      display: inline-block;
+      position: absolute;
+      width: 36px;
+      height: 2px;
+      top: 49px;
+      right: 32px;
+
+      background-color: ${({ theme }) => theme.colors.font};
+    }
+    &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: 36px;
+      height: 2px;
+      top: 38px;
+      right: 32px;
+      background-color: ${({ theme }) => theme.colors.font};
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      background-color: ${({ theme }) => theme.colors.font};
+      bottom: 38px;
+      right: 32px;
+    }
+
+    ${props =>
+      props.isOpen &&
+      css`
+        span {
+          background-color: rgb(255, 255, 255, 0);
+        }
+        &::before {
+          top: 49px;
+          transform: rotate(-45deg);
+        }
+
+        &::after {
+          width: 36px;
+          bottom: 49px;
+          transform: rotate(45deg);
+        }
+      `}
   }
 `;
 export default HeaderMenu;

@@ -7,4 +7,8 @@ export interface ITheme {
     border: string;
     paceholder: string;
   };
+  media: {
+    tablet: string;
+    mobile: string;
+  };
 }

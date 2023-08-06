@@ -14,6 +14,10 @@ export const Logo = () => {
     </StyledLogo>
   );
 };
-const StyledLogo = styled.a``;
+const StyledLogo = styled.a`
+  @media ${({ theme }) => theme.media.tablet} {
+    display: none;
+  }
+`;
 
 export default Logo;

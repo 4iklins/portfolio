@@ -24,11 +24,10 @@ export const Header = () => {
 const StyledHeader = styled.header`
   background-color: rgb(31, 31, 32, 0.9);
   position: fixed;
-  padding: 0 20px;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10000;
+  z-index: 100;
 `;
 
 export default Header;
