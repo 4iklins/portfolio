@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { FlexContainer } from '../../../components/FlexContainer';
 import myPhoto from '../../../assets/img/photo.jpg';
 import { Container } from '../../../components/Container';
+import { font } from '../../../styles/common';
 
 export const Main = () => {
   return (
@@ -9,7 +10,8 @@ export const Main = () => {
       <Container>
         <FlexContainer
           align='center'
-          content='space-between'>
+          content='space-between'
+          wrap='wrap'>
           <div>
             <SmallText>Hi there</SmallText>
             <MainTitle>
@@ -29,11 +31,21 @@ export const Main = () => {
 const StyledMain = styled.section`
   display: flex;
   min-height: 100vh;
+  @media ${({ theme }) => theme.media.tablet} {
+    ${FlexContainer} {
+      flex-direction: column;
+    }
+  }
 `;
 const StyledPhoto = styled.img`
   width: 350px;
   height: 430px;
   object-fit: cover;
+  margin-right: 20px;
+  @media ${({ theme }) => theme.media.tablet} {
+    width: 310px;
+    height: 380px;
+  }
 `;
 
 const SmallText = styled.span`
@@ -42,14 +54,13 @@ const SmallText = styled.span`
 `;
 
 const MainTitle = styled.h2`
-  color: #fff;
-  font-family: Josefin Sans;
-  font-size: 50px;
-  font-weight: 700;
+  margin: 10px 0;
+  ${font({ family: 'Josefin Sans, sans-serif', weigth: 700, Fmax: 50, Fmin: 36 })}
   letter-spacing: 2.5px;
   span {
     position: relative;
     z-index: 0;
+    white-space: nowrap;
     &::before {
       content: '';
       position: absolute;
@@ -61,10 +72,12 @@ const MainTitle = styled.h2`
       bottom: 0;
     }
   }
+  @media ${({ theme }) => theme.media.tablet} {
+    margin: 15px 0 22px;
+  }
 `;
 const PageTitle = styled.h1`
-  font-size: 27px;
-  font-weight: 400;
+  ${font({ Fmax: 27, Fmin: 20 })}
 `;
 
 const PhotoWrapper = styled.div`
@@ -79,6 +92,15 @@ const PhotoWrapper = styled.div`
     height: 470px;
     border: 5px solid ${({ theme }) => theme.colors.accent};
     z-index: -1;
+  }
+  @media ${({ theme }) => theme.media.tablet} {
+    margin-top: 65px;
+    &::before {
+      width: 314px;
+      height: 414px;
+      top: -20px;
+      left: 20px;
+    }
   }
 `;
 
