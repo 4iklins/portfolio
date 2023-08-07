@@ -10,5 +10,6 @@ export interface ITheme {
   media: {
     tablet: string;
     mobile: string;
+    desktop: string;
   };
 }

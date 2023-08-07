@@ -31,14 +31,17 @@ const Work = ({ imgSrc, title, description, linkDemo, linkCode }: WorkProps) => 
 
 const StyledWork = styled.div`
   min-height: 1vh;
-  max-width: 540px;
-  width: 100%;
+  width: 330px;
+  flex-grow: 1;
   background-color: ${({ theme }) => theme.colors.bgSecondary};
   ${Link} {
     padding: 10px 0;
     & + ${Link} {
       margin-left: 20px;
     }
+  }
+  @media ${({ theme }) => theme.media.desktop} {
+    max-width: 540px;
   }
 `;
 const Image = styled.img`
@@ -84,6 +87,12 @@ const ImageWrapper = styled.div`
       left: 0;
       right: 0;
       bottom: 0;
+    }
+  }
+  @media ${({ theme }) => theme.media.tablet} {
+    &:before,
+    ${Button} {
+      opacity: 1;
     }
   }
 `;

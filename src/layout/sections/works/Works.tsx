@@ -16,7 +16,9 @@ const Works = () => {
         <WorkMenu menu={menu} />
         <FlexContainer
           content='space-between'
-          align='start'>
+          align='start'
+          wrap='wrap'
+          gap='30px'>
           {worksData.map(work => {
             return <Work {...work} />;
           })}
