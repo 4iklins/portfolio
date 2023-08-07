@@ -19,7 +19,7 @@ const Slider = () => {
   );
 };
 const StyledSlider = styled.div`
-  width: 500px;
+  max-width: 500px;
   text-align: center;
 `;
 const Text = styled.p``;
