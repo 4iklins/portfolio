@@ -1,20 +1,23 @@
 import styled from 'styled-components';
 import SectionTitle from '../../../components/SectionTitle';
 import { Button } from '../../../components/Button';
+import { Container } from '../../../components/Container';
 
 export const Contact = () => {
   return (
     <StyledContact>
-      <SectionTitle>Contact</SectionTitle>
-      <Form>
-        <Input placeholder='Name' />
-        <Input placeholder='Subject' />
-        <Input
-          placeholder='Text'
-          as='textarea'
-        />
-        <Button>Send</Button>
-      </Form>
+      <Container>
+        <SectionTitle>Contact</SectionTitle>
+        <Form>
+          <Input placeholder='Name' />
+          <Input placeholder='Subject' />
+          <Input
+            placeholder='Text'
+            as='textarea'
+          />
+          <Button>Send</Button>
+        </Form>
+      </Container>
     </StyledContact>
   );
 };
