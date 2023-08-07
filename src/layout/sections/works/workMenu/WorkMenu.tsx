@@ -17,11 +17,11 @@ export const WorkMenu = ({ menu }: { menu: string[] }) => {
   );
 };
 const StyledMenu = styled.nav`
-  margin-bottom: 40px;
   ul {
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    justify-content: space-between;
+    max-width: 330px;
+    margin: 0 auto 40px;
   }
 `;
 
