@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Button = styled.button`
   position: relative;
   max-width: 170px;
-  padding: 10px;
+  padding: 7px 20px;
   color: ${({ theme }) => theme.colors.font};
   font-size: 14px;
   font-weight: 400;
@@ -16,9 +16,9 @@ export const Button = styled.button`
     display: inline-block;
     position: absolute;
     height: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 4px;
+    left: 20px;
+    right: 20px;
+    bottom: 2px;
     background-color: ${({ theme }) => theme.colors.accent};
     z-index: -1;
   }

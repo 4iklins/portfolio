@@ -30,7 +30,7 @@ const Testimony = () => {
 };
 const StyledTestimony = styled.section`
   ${IconWrapper} {
-    margin: 30px 0 70px;
+    margin: 35px 0 70px;
   }
 `;
 

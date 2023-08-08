@@ -9,7 +9,7 @@ export const Skills = () => {
   return (
     <StyledSkills>
       <Container>
-        <SectionTitle>My skills</SectionTitle>
+        <SectionTitle>My Skills</SectionTitle>
         <FlexContainer
           wrap='wrap'
           content='center'>

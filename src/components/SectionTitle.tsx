@@ -6,14 +6,14 @@ export const SectionTitle = styled.h2`
   text-align: center;
   ${font({ family: 'Josefin Sans', weigth: 600, Fmax: 36, Fmin: 30 })}
   letter-spacing: 5px;
-  margin-bottom: 90px;
+  margin-bottom: 85px;
   &::after {
     content: '';
     position: absolute;
     width: 55px;
     height: 1px;
     background-color: ${({ theme }) => theme.colors.accent};
-    bottom: -30px;
+    bottom: -25px;
     left: 50%;
     transform: translateX(-50%);
     @media ${({ theme }) => theme.media.tablet} {

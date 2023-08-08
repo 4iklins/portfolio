@@ -30,12 +30,12 @@ const SkillCard = ({ title, iconId, description, ...props }: SkillProps) => {
 const StyledSkillCard = styled.div`
   width: calc(100% / 3);
   min-width: 300px;
-  padding: 60px 20px 40px;
+  padding: 50px 20px 52px;
   flex-grow: 1;
 `;
 
 const StyledSkillHeading = styled.h3`
-  margin: 70px 0 15px;
+  margin: 65px 0 15px;
   text-transform: uppercase;
 `;
 

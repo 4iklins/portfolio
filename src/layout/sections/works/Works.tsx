@@ -12,7 +12,7 @@ const Works = () => {
   return (
     <StyledWorks>
       <Container>
-        <SectionTitle>My works</SectionTitle>
+        <SectionTitle>My Works</SectionTitle>
         <WorkMenu menu={menu} />
         <FlexContainer
           content='space-between'

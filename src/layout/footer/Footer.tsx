@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Icon from '../../components/icon/Icon';
 import { FlexContainer } from '../../components/FlexContainer';
+import { font } from '../../styles/common';
 
 const Footer = () => {
   return (
@@ -55,8 +56,7 @@ const StiledFooter = styled.footer`
 const Name = styled.span`
   display: block;
   text-align: center;
-  font-family: Josefin Sans;
-  font-size: 22px;
+  ${font({ family: 'Josefin Sans, sans-serif', weigth: 700, Fmax: 22, Fmin: 16 })}
   font-weight: 700;
   letter-spacing: 3px;
 `;

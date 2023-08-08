@@ -6,8 +6,7 @@ const Slider = () => {
     <StyledSlider>
       <Text>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptatem exercitationem assumenda accusamus
-        possimus expedita perferendis distinctio rerum necessitatibus cum officiis reiciendis, molestiae enim eius, et
-        sit praesentium ea.
+        possimus expedita perferendis distinctio rerum necessitatibus cum officiis reiciendis, molestiae enim.
       </Text>
       <Name>@Ivan Ivanov</Name>
       <Pagination>
@@ -25,7 +24,7 @@ const StyledSlider = styled.div`
 const Text = styled.p``;
 const Name = styled.span`
   display: inline-block;
-  margin: 20px 0 40px;
+  margin: 25px 0 30px;
   font-family: Josefin Sans;
   font-size: 16px;
   font-weight: 600;
