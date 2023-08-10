@@ -1,14 +1,14 @@
-import styled from 'styled-components';
 import SectionTitle from '../../../components/SectionTitle';
 import Icon from '../../../components/icon/Icon';
 import Slider from '../../../components/slider/Slider';
 import { FlexContainer } from '../../../components/FlexContainer';
-import { IconWrapper } from '../skills/skill-card/SkillCard';
+import { IconWrapper } from '../skills/skill_card/skill_card_styles';
 import { Container } from '../../../components/Container';
+import { S } from './testimony-styles';
 
 const Testimony = () => {
   return (
-    <StyledTestimony>
+    <S.Testimony>
       <SectionTitle>Testimony</SectionTitle>
       <Container>
         <FlexContainer
@@ -25,13 +25,8 @@ const Testimony = () => {
           <Slider />
         </FlexContainer>
       </Container>
-    </StyledTestimony>
+    </S.Testimony>
   );
 };
-const StyledTestimony = styled.section`
-  ${IconWrapper} {
-    margin: 35px 0 70px;
-  }
-`;
 
 export default Testimony;

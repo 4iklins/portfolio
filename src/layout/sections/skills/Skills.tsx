@@ -1,13 +1,13 @@
-import styled from 'styled-components';
 import { FlexContainer } from '../../../components/FlexContainer';
 import SectionTitle from '../../../components/SectionTitle';
-import SkillCard from './skill-card/SkillCard';
+import SkillCard from './skill_card/SkillCard';
 import { skillsArray } from './skillsData';
 import { Container } from '../../../components/Container';
+import { S } from './skills_styles';
 
 export const Skills = () => {
   return (
-    <StyledSkills>
+    <S.Skills>
       <Container>
         <SectionTitle>My Skills</SectionTitle>
         <FlexContainer
@@ -24,10 +24,8 @@ export const Skills = () => {
           })}
         </FlexContainer>
       </Container>
-    </StyledSkills>
+    </S.Skills>
   );
 };
-
-const StyledSkills = styled.section``;
 
 export default Skills;

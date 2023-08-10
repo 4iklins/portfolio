@@ -1,107 +1,30 @@
-import styled from 'styled-components';
 import { FlexContainer } from '../../../components/FlexContainer';
 import myPhoto from '../../../assets/img/photo.jpg';
 import { Container } from '../../../components/Container';
-import { font } from '../../../styles/common';
+import { S } from './main_styles';
 
 export const Main = () => {
   return (
-    <StyledMain>
+    <S.Main>
       <Container>
         <FlexContainer
           align='center'
           content='space-between'
           wrap='wrap'>
           <div>
-            <SmallText>Hi there</SmallText>
-            <MainTitle>
+            <S.SmallText>Hi there</S.SmallText>
+            <S.MainTitle>
               I am <span>Andrei Bortnik</span>
-            </MainTitle>
-            <PageTitle>A Web Developer.</PageTitle>
+            </S.MainTitle>
+            <S.PageTitle>A Web Developer.</S.PageTitle>
           </div>
-          <PhotoWrapper>
-            <StyledPhoto src={myPhoto} />
-          </PhotoWrapper>
+          <S.PhotoWrapper>
+            <S.StyledPhoto src={myPhoto} />
+          </S.PhotoWrapper>
         </FlexContainer>
       </Container>
-    </StyledMain>
+    </S.Main>
   );
 };
-
-const StyledMain = styled.section`
-  display: flex;
-  min-height: 100vh;
-  @media ${({ theme }) => theme.media.tablet} {
-    ${FlexContainer} {
-      flex-direction: column;
-    }
-  }
-`;
-const StyledPhoto = styled.img`
-  width: 350px;
-  height: 430px;
-  object-fit: cover;
-  margin-right: 20px;
-  @media ${({ theme }) => theme.media.tablet} {
-    width: 310px;
-    height: 380px;
-  }
-`;
-
-const SmallText = styled.span`
-  font-size: 14px;
-  font-weight: 400;
-`;
-
-const MainTitle = styled.h2`
-  margin: 10px 0;
-  ${font({ family: 'Josefin Sans, sans-serif', weigth: 700, Fmax: 50, Fmin: 36 })}
-  letter-spacing: 2.5px;
-  span {
-    position: relative;
-    z-index: 0;
-    white-space: nowrap;
-    &::before {
-      content: '';
-      position: absolute;
-      display: inline-block;
-      height: 20px;
-      width: 100%;
-      background-color: ${({ theme }) => theme.colors.accent};
-      z-index: -1;
-      bottom: 0;
-    }
-  }
-  @media ${({ theme }) => theme.media.tablet} {
-    margin: 15px 0 22px;
-  }
-`;
-const PageTitle = styled.h1`
-  ${font({ Fmax: 27, Fmin: 20 })}
-`;
-
-const PhotoWrapper = styled.div`
-  position: relative;
-  z-index: 0;
-  &::before {
-    content: '';
-    position: absolute;
-    top: -24px;
-    left: 24px;
-    width: 360px;
-    height: 470px;
-    border: 5px solid ${({ theme }) => theme.colors.accent};
-    z-index: -1;
-  }
-  @media ${({ theme }) => theme.media.tablet} {
-    margin-top: 65px;
-    &::before {
-      width: 314px;
-      height: 414px;
-      top: -20px;
-      left: 20px;
-    }
-  }
-`;
 
 export default Main;

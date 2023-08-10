@@ -1,30 +1,20 @@
-import styled from 'styled-components';
 import { Link } from '../../../../components/Link';
+import { S } from './work_menu_styles';
 
 export const WorkMenu = ({ menu }: { menu: string[] }) => {
   return (
-    <StyledMenu>
+    <S.WorkMenu>
       <ul>
         {menu.map(item => {
           return (
-            <ListItem>
+            <S.MenuItem>
               <Link href='#'>{item}</Link>
-            </ListItem>
+            </S.MenuItem>
           );
         })}
       </ul>
-    </StyledMenu>
+    </S.WorkMenu>
   );
 };
-const StyledMenu = styled.nav`
-  ul {
-    display: flex;
-    justify-content: space-between;
-    max-width: 330px;
-    margin: 0 auto 40px;
-  }
-`;
-
-const ListItem = styled.li``;
 
 export default WorkMenu;

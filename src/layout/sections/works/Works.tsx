@@ -1,16 +1,16 @@
-import styled from 'styled-components';
 import SectionTitle from '../../../components/SectionTitle';
 import WorkMenu from './workMenu/WorkMenu';
 import { FlexContainer } from '../../../components/FlexContainer';
 import { worksData } from './worksData';
 import Work from './work/Work';
 import { Container } from '../../../components/Container';
+import { S } from './works_styles';
 
 const menu = ['All', 'Landing page', 'React', 'SPA'];
 
 const Works = () => {
   return (
-    <StyledWorks>
+    <S.Works>
       <Container>
         <SectionTitle>My Works</SectionTitle>
         <WorkMenu menu={menu} />
@@ -24,10 +24,8 @@ const Works = () => {
           })}
         </FlexContainer>
       </Container>
-    </StyledWorks>
+    </S.Works>
   );
 };
-
-const StyledWorks = styled.section``;
 
 export default Works;

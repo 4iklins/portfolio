@@ -1,12 +1,12 @@
-import styled from 'styled-components';
 import SectionTitle from '../../../components/SectionTitle';
 import { Button } from '../../../components/Button';
 import { Container } from '../../../components/Container';
 import { FlexContainer } from '../../../components/FlexContainer';
+import { S } from './slogan_styles';
 
 const Slogan = () => {
   return (
-    <StyledSlogan>
+    <S.Slogan>
       <Container>
         <FlexContainer
           direction='column'
@@ -15,12 +15,8 @@ const Slogan = () => {
           <Button>Hire me</Button>
         </FlexContainer>
       </Container>
-    </StyledSlogan>
+    </S.Slogan>
   );
 };
-const StyledSlogan = styled.section`
-  ${Button} {
-    margin: 0 auto;
-  }
-`;
+
 export default Slogan;
