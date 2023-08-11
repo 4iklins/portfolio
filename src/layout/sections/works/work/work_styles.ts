@@ -9,6 +9,9 @@ const Work = styled.div`
   background-color: ${({ theme }) => theme.colors.bgSecondary};
   ${Link} {
     padding: 10px 0;
+    &::before {
+      bottom: 7px;
+    }
     & + ${Link} {
       margin-left: 20px;
     }

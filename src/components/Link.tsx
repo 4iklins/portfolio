@@ -8,13 +8,14 @@ export const Link = styled.a<{ active?: boolean }>`
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 1px;
+  line-height: 1.2;
   text-transform: uppercase;
   &::before {
     content: '';
     position: absolute;
     display: inline-block;
     height: 10px;
-    bottom: 7px;
+    bottom: 5px;
     left: 0;
     background-color: ${({ theme }) => theme.colors.accent};
     z-index: -1;
