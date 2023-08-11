@@ -9,6 +9,7 @@ export const worksData = [
     imgSrc: socialNetwork,
     linkDemo: '#',
     linkCode: '#',
+    type: 'spa',
   },
   {
     title: 'Timer',
@@ -17,5 +18,6 @@ export const worksData = [
     imgSrc: timer,
     linkDemo: '#',
     linkCode: '#',
+    type: 'react',
   },
 ];

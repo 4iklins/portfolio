@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Link = styled.a`
+export const Link = styled.a<{ active?: boolean }>`
   position: relative;
   padding: 10px;
   z-index: 0;
@@ -24,4 +24,12 @@ export const Link = styled.a`
       right: 0;
     }
   }
+
+  ${props =>
+    props.active &&
+    css`
+      &::before {
+        right: 0;
+      }
+    `}
 `;
