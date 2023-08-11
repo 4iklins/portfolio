@@ -1,51 +1,27 @@
-import styled from 'styled-components';
-import { FlexContainer } from '../FlexContainer';
+import { S } from './slider_styles';
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
+import { slides } from './slideData';
+import Slide from './Slide';
+import './slider_styles.css';
+
+const items = slides.map(slide => (
+  <Slide
+    name={slide.name}
+    text={slide.text}
+  />
+));
 
 const Slider = () => {
   return (
-    <StyledSlider>
-      <Text>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptatem exercitationem assumenda accusamus
-        possimus expedita perferendis distinctio rerum necessitatibus cum officiis reiciendis, molestiae enim.
-      </Text>
-      <Name>@Ivan Ivanov</Name>
-      <Pagination>
-        <span></span>
-        <span className='active'></span>
-        <span></span>
-      </Pagination>
-    </StyledSlider>
+    <S.Slider>
+      <AliceCarousel
+        mouseTracking
+        items={items}
+        controlsStrategy='alternate'
+      />
+    </S.Slider>
   );
 };
-const StyledSlider = styled.div`
-  max-width: 500px;
-  text-align: center;
-`;
-const Text = styled.p``;
-const Name = styled.span`
-  display: inline-block;
-  margin: 25px 0 30px;
-  font-family: Josefin Sans;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-`;
-const Pagination = styled.div`
-  & span {
-    display: inline-block;
-    width: 7px;
-    height: 7px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.5);
-    & + span {
-      margin-left: 5px;
-    }
-    &.active {
-      width: 20px;
-      background-color: ${({ theme }) => theme.colors.accent};
-    }
-  }
-`;
 
 export default Slider;

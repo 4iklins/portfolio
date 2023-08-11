@@ -9,6 +9,7 @@ interface WorkProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HT
   description: string;
   linkDemo: string;
   linkCode: string;
+  type?: string;
 }
 
 const Work = ({ imgSrc, title, description, linkDemo, linkCode }: WorkProps) => {
