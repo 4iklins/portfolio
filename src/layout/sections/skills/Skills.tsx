@@ -16,6 +16,7 @@ export const Skills = () => {
           {skillsArray.map(skill => {
             return (
               <SkillCard
+                key={skill.title}
                 title={skill.title}
                 iconId={skill.iconId}
                 description={skill.description}

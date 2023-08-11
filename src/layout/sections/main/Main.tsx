@@ -2,6 +2,7 @@ import { FlexContainer } from '../../../components/FlexContainer';
 import myPhoto from '../../../assets/img/photo.jpg';
 import { Container } from '../../../components/Container';
 import { S } from './main_styles';
+import Typewriter from 'typewriter-effect';
 
 export const Main = () => {
   return (
@@ -16,7 +17,14 @@ export const Main = () => {
             <S.MainTitle>
               I am <span>Andrei Bortnik</span>
             </S.MainTitle>
-            <S.PageTitle>A Web Developer.</S.PageTitle>
+            <S.PageTitle>
+              <Typewriter
+                onInit={typewriter => {
+                  typewriter.pauseFor(2000).typeString('A Web Developer.').start();
+                }}
+              />
+              <p>A Web Developer.</p>
+            </S.PageTitle>
           </div>
           <S.PhotoWrapper>
             <S.StyledPhoto src={myPhoto} />

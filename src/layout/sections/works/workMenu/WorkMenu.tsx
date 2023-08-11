@@ -8,7 +8,9 @@ export const WorkMenu = ({ menu, handleClick, tabState }: IMenuItem) => {
       <ul>
         {menu.map(item => {
           return (
-            <S.MenuItem onClick={() => handleClick(item.type)}>
+            <S.MenuItem
+              onClick={() => handleClick(item.type)}
+              key={item.type}>
               <Link
                 active={item.type === tabState}
                 as={'button'}>

@@ -52,6 +52,10 @@ const MainTitle = styled.h2`
 `;
 const PageTitle = styled.h1`
   ${font({ Fmax: 27, Fmin: 20 })}
+
+  p {
+    display: none;
+  }
 `;
 
 const PhotoWrapper = styled.div`

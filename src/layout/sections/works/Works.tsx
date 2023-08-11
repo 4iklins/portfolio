@@ -41,7 +41,12 @@ const Works = () => {
           wrap='wrap'
           gap='30px'>
           {filteredWorks.map(work => {
-            return <Work {...work} />;
+            return (
+              <Work
+                key={work.type}
+                {...work}
+              />
+            );
           })}
         </FlexContainer>
       </Container>

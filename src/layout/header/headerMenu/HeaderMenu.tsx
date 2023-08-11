@@ -17,7 +17,7 @@ const HeaderMenu = ({ menu }: { menu: string[] }) => {
       <ul>
         {menu.map(item => {
           return (
-            <S.MenuItem>
+            <S.MenuItem key={item}>
               <S.Link href='#'>
                 {item}
                 <S.Mask>

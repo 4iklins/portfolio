@@ -14,7 +14,7 @@ const Footer = () => {
         <S.SocialList>
           {social.map(item => {
             return (
-              <S.SocialItem>
+              <S.SocialItem key={item.id}>
                 <S.SocialLink href='#'>
                   <Icon
                     id={item.id}
