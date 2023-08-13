@@ -6,7 +6,7 @@ import Typewriter from 'typewriter-effect';
 
 export const Main = () => {
   return (
-    <S.Main>
+    <S.Main id='main'>
       <Container>
         <FlexContainer
           align='center'

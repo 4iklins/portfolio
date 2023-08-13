@@ -27,7 +27,7 @@ const Works = () => {
     return work.type === tabState;
   });
   return (
-    <S.Works>
+    <S.Works id='work'>
       <Container>
         <SectionTitle>My Works</SectionTitle>
         <WorkMenu

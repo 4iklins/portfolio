@@ -8,7 +8,7 @@ import { S } from './testimony-styles';
 
 const Testimony = () => {
   return (
-    <S.Testimony>
+    <S.Testimony id='testimony'>
       <SectionTitle>Testimony</SectionTitle>
       <Container>
         <FlexContainer

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { IconWrapper } from '../skills/skill_card/skill_card_styles';
 
 const Testimony = styled.section`
+  position: relative;
   ${IconWrapper} {
     margin: 35px 0 70px;
   }

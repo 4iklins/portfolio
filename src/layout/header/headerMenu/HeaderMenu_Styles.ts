@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { Link } from 'react-scroll';
 
 const HeaderMenu = styled.nav<{ isOpen: boolean }>`
   ul {
@@ -22,14 +23,6 @@ const HeaderMenu = styled.nav<{ isOpen: boolean }>`
   }
 `;
 
-const Link = styled.a`
-  position: relative;
-  font-family: Josefin Sans;
-  font-size: 30px;
-  font-weight: 400;
-  color: transparent;
-`;
-
 const Mask = styled.span`
   position: absolute;
   top: 0;
@@ -49,6 +42,15 @@ const Mask = styled.span`
 
 const MenuItem = styled.li`
   position: relative;
+`;
+const NavLink = styled(Link)`
+  position: relative;
+  font-family: Josefin Sans;
+  font-size: 30px;
+  font-weight: 400;
+  color: transparent;
+  text-transform: capitalize;
+  cursor: pointer;
   &::before {
     content: '';
     position: absolute;
@@ -61,7 +63,8 @@ const MenuItem = styled.li`
     right: -10px;
     z-index: 1;
   }
-  &:hover {
+  &:hover,
+  &.active {
     &::before {
       transform: scale(1);
     }
@@ -141,6 +144,6 @@ export const S = {
   BurgerButton,
   Mask,
   MenuItem,
-  Link,
+  NavLink,
   HeaderMenu,
 };

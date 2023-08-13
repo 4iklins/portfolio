@@ -11,7 +11,9 @@ const Slide = styled.div`
     cursor: grabbing;
   }
 `;
-const Text = styled.p``;
+const Text = styled.p`
+  user-select: none;
+`;
 const Name = styled.span`
   display: inline-block;
   margin: 25px 0 30px;
@@ -20,6 +22,7 @@ const Name = styled.span`
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
+  user-select: none;
 `;
 const Pagination = styled.div`
   & span {

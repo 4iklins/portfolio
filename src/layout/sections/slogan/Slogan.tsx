@@ -6,7 +6,7 @@ import { S } from './slogan_styles';
 
 const Slogan = () => {
   return (
-    <S.Slogan>
+    <S.Slogan id='slogan'>
       <Container>
         <FlexContainer
           direction='column'

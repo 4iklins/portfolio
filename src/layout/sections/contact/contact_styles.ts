@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const Contact = styled.section`
+  position: relative;
   min-height: 50vh;
   background-color: #eafcab;
 `;

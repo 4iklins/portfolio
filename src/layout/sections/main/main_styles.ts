@@ -15,10 +15,11 @@ const StyledPhoto = styled.img`
   width: 350px;
   height: 430px;
   object-fit: cover;
-  margin-right: 20px;
+  margin-right: 16px;
   @media ${({ theme }) => theme.media.tablet} {
     width: 310px;
     height: 380px;
+    margin-right: 0;
   }
 `;
 
@@ -65,7 +66,7 @@ const PhotoWrapper = styled.div`
     content: '';
     position: absolute;
     top: -24px;
-    left: 24px;
+    left: 20px;
     width: 360px;
     height: 470px;
     border: 5px solid ${({ theme }) => theme.colors.accent};
@@ -77,7 +78,7 @@ const PhotoWrapper = styled.div`
       width: 314px;
       height: 414px;
       top: -20px;
-      left: 20px;
+      left: 18px;
     }
   }
 `;
