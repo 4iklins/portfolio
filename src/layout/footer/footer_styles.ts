@@ -20,9 +20,10 @@ const SocialList = styled.ul`
 `;
 const SocialItem = styled.li`
   border-radius: 50%;
+  transform: translateY(0);
+  transition: ${({ theme }) => theme.animation.transition};
   svg {
     fill: ${({ theme }) => theme.colors.accent};
-    transform: translateY(0);
     transition: ${({ theme }) => theme.animation.transition};
   }
   &:hover {
