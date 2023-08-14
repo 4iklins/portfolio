@@ -21,6 +21,7 @@ export const Button = styled.button`
     bottom: 2px;
     background-color: ${({ theme }) => theme.colors.accent};
     z-index: -1;
+    transition: ${({ theme }) => theme.animation.transition};
   }
   &:hover {
     &::before {

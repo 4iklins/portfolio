@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import Icon from '../icon/Icon';
-
+import { animateScroll } from 'react-scroll';
 export const Logo = () => {
   return (
-    <StyledLogo href='#'>
+    <StyledLogo onClick={() => animateScroll.scrollToTop()}>
       <Icon
         id='code'
         width='50'
@@ -15,6 +15,7 @@ export const Logo = () => {
   );
 };
 const StyledLogo = styled.a`
+  cursor: pointer;
   @media ${({ theme }) => theme.media.tablet} {
     display: none;
   }

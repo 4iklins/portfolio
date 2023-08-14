@@ -1,3 +1,4 @@
+import { theme } from './../../../styles/theme';
 import styled, { css } from 'styled-components';
 import { Link } from 'react-scroll';
 
@@ -38,6 +39,7 @@ const Mask = styled.span`
       transform: translateY(-50%);
     }
   }
+  transition: ${({ theme }) => theme.animation.transition};
 `;
 
 const MenuItem = styled.li`
@@ -62,6 +64,7 @@ const NavLink = styled(Link)`
     left: -10px;
     right: -10px;
     z-index: 1;
+    transition: ${({ theme }) => theme.animation.transition};
   }
   &:hover,
   &.active {

@@ -12,4 +12,7 @@ export interface ITheme {
     mobile: string;
     desktop: string;
   };
+  animation: {
+    transition: string;
+  };
 }

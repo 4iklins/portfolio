@@ -20,6 +20,7 @@
   cursor: pointer;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.5);
+  transition: 0.2s ease-in-out;
 }
 .alice-carousel__dots-item:not(.__custom):hover {
   background-color: #7572d5;

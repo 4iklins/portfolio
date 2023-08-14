@@ -18,18 +18,12 @@ const SocialList = styled.ul`
   display: flex;
   gap: 20px;
 `;
-const SocialItem = styled.li``;
-const SocialLink = styled.a`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 35px;
-  height: 35px;
+const SocialItem = styled.li`
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-
   svg {
     fill: ${({ theme }) => theme.colors.accent};
+    transform: translateY(0);
+    transition: ${({ theme }) => theme.animation.transition};
   }
   &:hover {
     background: ${({ theme }) => theme.colors.accent};
@@ -38,6 +32,15 @@ const SocialLink = styled.a`
       fill: ${({ theme }) => theme.colors.bgPrimary};
     }
   }
+`;
+const SocialLink = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
 `;
 const Copyright = styled.small`
   opacity: 0.4;
