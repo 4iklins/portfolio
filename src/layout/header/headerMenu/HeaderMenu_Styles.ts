@@ -100,6 +100,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       right: 32px;
 
       background-color: ${({ theme }) => theme.colors.font};
+      transition: ${({ theme }) => theme.animation.transition};
     }
     &::before {
       content: '';
@@ -110,6 +111,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       top: 38px;
       right: 32px;
       background-color: ${({ theme }) => theme.colors.font};
+      transition: ${({ theme }) => theme.animation.transition};
     }
 
     &::after {
@@ -121,6 +123,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       background-color: ${({ theme }) => theme.colors.font};
       bottom: 38px;
       right: 32px;
+      transition: ${({ theme }) => theme.animation.transition};
     }
 
     ${props =>

@@ -1,15 +1,15 @@
-import { DetailedHTMLProps, HTMLAttributes } from 'react';
 import { Link } from '../../../../components/Link';
 import { Button } from '../../../../components/Button';
 import { S } from './work_styles';
 
-interface WorkProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+interface WorkProps {
   imgSrc: string;
   title: string;
   description: string;
   linkDemo: string;
   linkCode: string;
   type?: string;
+  id: number;
 }
 
 const Work = ({ imgSrc, title, description, linkDemo, linkCode }: WorkProps) => {

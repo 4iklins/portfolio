@@ -8,6 +8,7 @@ import { S } from './works_styles';
 import { tabType } from '../../../interfaces/workMenu';
 import { useState } from 'react';
 import { ITabMenu } from '../../../interfaces/workMenu';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const menu: ITabMenu[] = [
   { title: 'All', type: 'all' },
@@ -36,18 +37,25 @@ const Works = () => {
           handleClick={handleTabClick}
         />
         <FlexContainer
-          content='space-between'
+          content='center'
           align='start'
           wrap='wrap'
           gap='30px'>
-          {filteredWorks.map(work => {
-            return (
-              <Work
-                key={work.type}
-                {...work}
-              />
-            );
-          })}
+          <AnimatePresence>
+            {filteredWorks.map(work => {
+              return (
+                <motion.div
+                  style={{ width: '400px', maxWidth: '540px', flexGrow: 1 }}
+                  layout
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  key={work.id}>
+                  <Work {...work} />
+                </motion.div>
+              );
+            })}
+          </AnimatePresence>
         </FlexContainer>
       </Container>
     </S.Works>

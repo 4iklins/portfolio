@@ -12,7 +12,7 @@ export const Skills = () => {
         <SectionTitle>My Skills</SectionTitle>
         <FlexContainer
           wrap='wrap'
-          content='center'>
+          content='space-between'>
           {skillsArray.map(skill => {
             return (
               <SkillCard

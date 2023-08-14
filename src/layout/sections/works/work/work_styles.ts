@@ -3,9 +3,6 @@ import { Link } from '../../../../components/Link';
 import { Button } from '../../../../components/Button';
 
 const Work = styled.div`
-  min-height: 1vh;
-  width: 330px;
-  flex-grow: 1;
   background-color: ${({ theme }) => theme.colors.bgSecondary};
   ${Link} {
     padding: 10px 0;
@@ -15,9 +12,6 @@ const Work = styled.div`
     & + ${Link} {
       margin-left: 20px;
     }
-  }
-  @media ${({ theme }) => theme.media.desktop} {
-    max-width: 540px;
   }
 `;
 const Image = styled.img`
